@@ -10,6 +10,20 @@
     --hover-bg: #1f2937;
 }
 
+.popup-message {
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    padding: 4px;
+    background-color: rgba(88, 166, 255, 0.1);
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.popup-message i {
+    color: var(--accent);
+}
+
 body {
     background-color: var(--background) !important;
     color: var(--text-primary) !important;
