@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container my-5">
+        <div class="card shadow-lg">
+            <div class="card-header">
+                <h2 class="mb-0 title-text text-center">Boolean Generator</h2>
+            </div>
+            <div class="card-body">
+                <div class="mb-4">
+                    <label for="names" class="form-label">Names/Usernames/Aliases</label>
+                    <textarea id="names" class="form-control" rows="3" placeholder="Enter names, one per line"></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label for="location" class="form-label">
+                        Location <span class="text-light opacity-75">(Optional)</span>
+                        <small class="form-text text-light opacity-75 d-block">Enter locations, one per line (e.g., "New York", "NYC", "Manhattan")</small>
+                    </label>
+                    <textarea id="location" class="form-control" rows="2" placeholder="Enter locations, one per line"></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Search Types</label>
+                    <select id="searchTypes" class="form-control" multiple>
+                        <option value="Socials">Social Media</option>
+                        <option value="General Criminal">General Criminal Activity</option>
+                        <option value="Counterfeit Goods">Counterfeit Goods</option>
+                        <option value="Drugs">Drugs</option>
+                        <option value="Fraud">Fraud</option>
+                        <option value="Gambling Facilitation">Gambling</option>
+                        <option value="HEX Adult Trafficking">Human Trafficking</option>
+                        <option value="HEX Elder">Elder Exploitation</option>
+                        <option value="HEX Extortion">Extortion</option>
+                        <option value="HEX Sextortion">Sextortion</option>
+                        <option value="HEX Sex Work">Sex Work</option>
+                        <option value="HEX Smuggling">Smuggling</option>
+                        <option value="Illicit Prison Activity">Prison Activity</option>
+                        <option value="Money Laundering">Money Laundering</option>
+                        <option value="Money Muling">Money Muling</option>
+                        <option value="Terrorist Financing">Terrorist Financing</option>
+                        <option value="Unregistered MSB">Unregistered MSB</option>
+                        <option value="Weapons Trafficking">Weapons</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input" type="checkbox" id="excludeDataAggregators">
+                        <label class="form-check-label ms-2 text-light" for="excludeDataAggregators">
+                            Exclude data aggregator sites
+                            <i class="fas fa-info-circle ms-1" data-bs-toggle="tooltip" data-bs-html="true" 
+                               title="Excludes results from commercial data aggregator sites.<br><br>Click 'Configure' to view or modify the list of excluded sites."></i>
+                        </label>
+                        <button class="btn btn-sm btn-outline-secondary ms-3" id="configureExclusions" 
+                                data-bs-toggle="modal" data-bs-target="#exclusionsModal">
+                            Configure
+                        </button>
+                    </div>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button id="generateBtn" class="btn btn-primary">Generate Queries</button>
+                    <button id="openAllBtn" class="btn btn-success" style="display: none;">Open All Queries</button>
+                </div>
+
+                <div id="queriesContainer" class="mt-4" style="display: none;">
+                    <h4 class="text-light">Generated Queries:</h4>
+                    <div id="queries" class="list-group"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for configuring exclusions -->
+    <div class="modal fade" id="exclusionsModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-light">Configure Excluded Sites</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-light opacity-75 small">Enter one domain per line. Do not include "www." or "http://"</p>
+                    <textarea id="excludedSites" class="form-control" rows="10"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="saveExclusions">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="js/keywords.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
