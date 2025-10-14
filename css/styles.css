@@ -1,0 +1,217 @@
+:root {
+    --primary: #1b2838;
+    --secondary: #2a475e;
+    --background: #0a0a0a;     /* Darker background */
+    --surface: #161b22;
+    --accent: #58a6ff;
+    --text-primary: #ffffff;
+    --text-secondary: #8b949e;
+    --border-color: #30363d;
+    --hover-bg: #1f2937;
+}
+
+body {
+    background-color: var(--background) !important;
+    color: var(--text-primary) !important;
+    min-height: 100vh;
+}
+
+html {
+    background-color: var(--background) !important;
+}
+
+.title-text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #58a6ff, #3178c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(88, 166, 255, 0.5);
+}
+
+.card {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.card-header {
+    background-color: var(--primary) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.form-control, .form-select {
+    background-color: var(--background) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--background) !important;
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 0.25rem rgba(88, 166, 255, 0.25) !important;
+}
+
+.form-control::placeholder {
+    color: var(--text-secondary) !important;
+}
+
+.form-label {
+    color: var(--text-primary) !important;
+}
+
+/* Select2 Customization */
+.select2-container--default .select2-selection--multiple {
+    background-color: var(--background) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: var(--secondary) !important;
+    border: none !important;
+    color: var(--text-primary) !important;
+    padding: 5px 10px !important;
+    border-radius: 15px !important;
+    margin: 3px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: var(--text-primary) !important;
+    margin-right: 5px !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: #ff4444 !important;
+}
+
+.select2-dropdown {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.select2-container--default .select2-search--dropdown .select2-search__field {
+    background-color: var(--background) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.select2-container--default .select2-results__option {
+    color: var(--text-primary) !important;
+}
+
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: var(--secondary) !important;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: var(--accent) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: var(--text-primary) !important;
+}
+
+.btn-primary:hover {
+    background-color: #4187e0 !important;
+    border-color: #4187e0 !important;
+}
+
+.btn-success {
+    background-color: #238636 !important;
+    border-color: #238636 !important;
+}
+
+.btn-success:hover {
+    background-color: #2ea043 !important;
+    border-color: #2ea043 !important;
+}
+
+.btn-outline-primary {
+    color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--accent) !important;
+    color: var(--text-primary) !important;
+}
+
+.btn-outline-success {
+    color: #238636 !important;
+    border-color: #238636 !important;
+}
+
+.btn-outline-success:hover {
+    background-color: #238636 !important;
+    color: var(--text-primary) !important;
+}
+
+.btn-outline-secondary {
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--secondary) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Query Items */
+.list-group-item {
+    background-color: var(--surface) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.list-group-item:hover {
+    background-color: var(--hover-bg) !important;
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color) !important;
+}
+
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Tooltip Customization */
+.tooltip .tooltip-inner {
+    background-color: var(--surface) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.form-check-input {
+    background-color: var(--background) !important;
+    border-color: var(--border-color) !important;
+}
+
+.form-check-input:checked {
+    background-color: var(--accent) !important;
+    border-color: var(--accent) !important;
+}
+
+/* Text Colors */
+.text-muted, .form-text {
+    color: var(--text-primary) !important;
+    opacity: 0.7;
+}
