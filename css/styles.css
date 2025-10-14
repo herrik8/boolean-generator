@@ -11,7 +11,7 @@
 }
 
 .popup-message {
-    color: var(--text-primary);
+    color: #ffffff;
     font-size: 0.9rem;
     opacity: 0.8;
     padding: 4px;
